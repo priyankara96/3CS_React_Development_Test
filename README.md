@@ -12,5 +12,5 @@
 
 <p align="center">
 <img src="Assets/screencapture1.png" height="500"/> &nbsp;
-<img src="Assets/screencapture2.png.png" height="500"/> &nbsp;
+<img src="Assets/screencapture2.png" height="500"/> &nbsp;
 </p>  
