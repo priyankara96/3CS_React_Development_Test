@@ -11,6 +11,6 @@
 ### ⍟ screenshots
 
 <p align="center">
-<img src="src/Resources/screencapture1.png" height="500"/> &nbsp;
-<img src="src/Resources/screencapture2.png" height="500"/> &nbsp;
+<img src="src/Assets/screencapture1.png" height="500"/> &nbsp;
+<img src="src/Assets/screencapture2.png" height="500"/> &nbsp;
 </p>  
