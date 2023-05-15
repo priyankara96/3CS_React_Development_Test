@@ -2,6 +2,7 @@ import "./Home.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import User from "./components/User/User";
+import background from "./Assets/background.jpeg";
 
 function Home() {
   const [users, setUsers] = useState([]);
@@ -13,29 +14,39 @@ function Home() {
   }, []);
 
   return (
-    <div className="Home">
-      <nav>
-        <h2>Title</h2>
-      </nav>
-      <h3>Users</h3>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <div className="Home">
+        <nav>
+          <h2>Title</h2>
+        </nav>
+        <h3>Users</h3>
 
-      <div className="container">
-        {users.map((user) => (
-          <Link to={`/users/${user.id}`} key={user.id} component={<User />}>
-            <div className="single">
-              <div className="img">
-                <img
-                  src={user.avatar}
-                  alt={`${user.first_name} ${user.last_name}`}
-                />
+        <div className="container">
+          {users.map((user) => (
+            <Link to={`/users/${user.id}`} key={user.id} component={<User />}>
+              <div className="single">
+                <div className="img">
+                  <img
+                    src={user.avatar}
+                    alt={`${user.first_name} ${user.last_name}`}
+                  />
+                </div>
+                <div className="info">
+                  <p>{user.first_name}</p>
+                  <p>{user.email}</p>
+                </div>
               </div>
-              <div className="info">
-                <p>{user.first_name}</p>
-                <p>{user.email}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
